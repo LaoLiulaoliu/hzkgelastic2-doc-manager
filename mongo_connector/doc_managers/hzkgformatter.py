@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # Author: Yuande Liu <miraclecome (at) gmail.com>
 
 from mongo_connector.doc_managers.formatters import DefaultDocumentFormatter
