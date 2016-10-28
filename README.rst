@@ -8,16 +8,16 @@ Installation
 
 This package is a document manager for mongo-connector.
 
-The easiest way to install elastic2-doc-manager is with
+The easiest way to install hzkgelastic2-doc-manager is with
 `pip <https://pypi.python.org/pypi/pip>`__::
 
-  pip install elastic2-doc-manager
+  pip install hzkgelastic2-doc-manager
 
-You can also install the development version of elastic2-doc-manager
+You can also install the development version of hzkgelastic2-doc-manager
 manually::
 
-  git clone https://github.com/mongodb-labs/elastic2-doc-manager
-  cd elastic2-doc-manager
+  git clone https://github.com/mongodb-labs/hzkgelastic2-doc-manager
+  cd hgkgelastic2-doc-manager
   python setup.py install
 
 You may have to run ``python setup.py install`` with ``sudo``, depending
@@ -36,7 +36,7 @@ Requirements
 
   The tests are not included in the package from PyPI and can only be acquired by cloning this repository on Github::
 
-      git clone https://github.com/mongodb-labs/elastic2-doc-manager
+      git clone https://github.com/mongodb-labs/hzkgelastic2-doc-manager
 
 2. Mongo Orchestration
 
@@ -72,9 +72,9 @@ You can run all the tests with one command (this works in all supported Python v
 
   python setup.py test
 
-In addition, you can be more selective with which tests you run (in Python > 2.6 only)! For example, if you only wanted to run the elastic2 doc manager tests::
+In addition, you can be more selective with which tests you run (in Python > 2.6 only)! For example, if you only wanted to run the hzkgelastic2 doc manager tests::
 
-  python -m unittest tests.test_elastic2_doc_manager
+  python -m unittest tests.test_hzkgelastic2_doc_manager
 
 Error messages
 ~~~~~~~~~~~~~~

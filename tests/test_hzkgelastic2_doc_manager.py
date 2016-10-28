@@ -21,12 +21,12 @@ sys.path[0:0] = [""]
 
 from mongo_connector import errors
 from mongo_connector.command_helper import CommandHelper
-from mongo_connector.doc_managers.elastic2_doc_manager import (
+from mongo_connector.doc_managers.hzkgelastic2_doc_manager import (
     DocManager, _HAS_AWS, convert_aws_args, create_aws_auth)
 from mongo_connector.test_utils import MockGridFSFile, TESTARGS
 
 from tests import unittest, elastic_pair
-from tests.test_elastic2 import ElasticsearchTestCase
+from tests.test_hzkgelastic2 import ElasticsearchTestCase
 
 
 class TestElasticDocManager(ElasticsearchTestCase):

@@ -26,7 +26,7 @@ from gridfs import GridFS
 sys.path[0:0] = [""]
 
 from mongo_connector.connector import Connector
-from mongo_connector.doc_managers.elastic2_doc_manager import DocManager
+from mongo_connector.doc_managers.hzkgelastic2_doc_manager import DocManager
 from mongo_connector.test_utils import (ReplicaSet,
                                         assert_soon,
                                         close_client)
