@@ -15,11 +15,11 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
 		},
 		"claims": [
 			{
-				"p": "商品名称",
-				"o": "芙蓉王"
+				"p": "name",
+				"o": "apple"
 			},
 			{
-				"p": "日期",
+				"p": "date",
 				"o": "2016-09-29"
 			}
 		]
@@ -30,8 +30,8 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
         "_id": ObjectId("57edbe3843ece042bb10ca9d"),
         "source.confidence": "0.6",
         "source.trackingId": "fd6d245b75096dfcf10a9905c377e28a0e53b103",
-        "商品名称": "芙蓉王",
-        "日期": "2016-09-29"
+        "name": "apple",
+        "date": "2016-09-29"
     }
     """
     def transform_element(self, key, value):
