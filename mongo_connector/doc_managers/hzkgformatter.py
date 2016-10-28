@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Author: Yuande Liu <miraclecome (at) gmail.com>
 
 from mongo_connector.doc_managers.formatters import DefaultDocumentFormatter
@@ -33,7 +35,7 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
     }
     """
     def transform_element(self, key, value):
-		if isinstance(value, list):
+        if isinstance(value, list):
             for podict in value:
                 yield podict["p"], podict["o"]
         elif isinstance(value, dict):
