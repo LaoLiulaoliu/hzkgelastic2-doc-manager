@@ -36,8 +36,11 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
     """
     def transform_element(self, key, value):
         if isinstance(value, list):
-            for podict in value:
-                yield podict["p"], podict["o"]
+            if len(value) > 0 and isinstance(value[0], dict):
+                for podict in value:
+                    yield podict["p"], podict["o"]
+            else: # list of string
+                yield key, value
         elif isinstance(value, dict):
             formatted = self.format_document(value)
             for doc_key in formatted:
