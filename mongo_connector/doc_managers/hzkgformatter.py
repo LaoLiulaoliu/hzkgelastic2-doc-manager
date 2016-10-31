@@ -28,8 +28,8 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
     tranformed formatter:
     {
         "_id": ObjectId("57edbe3843ece042bb10ca9d"),
-        "source.confidence": "0.6",
-        "source.trackingId": "fd6d245b75096dfcf10a9905c377e28a0e53b103",
+        "source_confidence": "0.6",
+        "source_trackingId": "fd6d245b75096dfcf10a9905c377e28a0e53b103",
         "name": "apple",
         "date": "2016-09-29"
     }
@@ -44,7 +44,7 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
         elif isinstance(value, dict):
             formatted = self.format_document(value)
             for doc_key in formatted:
-                yield "%s.%s" % (key, doc_key), formatted[doc_key]
+                yield "%s_%s" % (key, doc_key), formatted[doc_key]
         else:
             # We assume that transform_value will return a 'flat' value,
             # not a list or dict
@@ -69,5 +69,5 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
                         if top_level:
                             yield new_k, new_v
                         else:
-                            yield "%s.%s" % (path_string, new_k), new_v
+                            yield "%s_%s" % (path_string, new_k), new_v
         return dict(flatten(document, []))
