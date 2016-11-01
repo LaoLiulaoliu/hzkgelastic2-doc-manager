@@ -34,7 +34,7 @@ from mongo_connector.constants import (DEFAULT_COMMIT_INTERVAL,
                                        DEFAULT_MAX_BULK)
 from mongo_connector.util import exception_wrapper, retry_until_ok
 from mongo_connector.doc_managers.doc_manager_base import DocManagerBase
-from .hzkgformatter import HzkgDocumentFormatter
+from hzkgformatter import HzkgDocumentFormatter
 
 _HAS_AWS = True
 try:
