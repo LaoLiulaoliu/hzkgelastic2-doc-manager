@@ -95,7 +95,7 @@ class DocManager(DocManagerBase):
                  meta_index_name="mongodb_meta", meta_type="mongodb_meta",
                  attachment_field="content", **kwargs):
         client_options = kwargs.get('clientOptions', {})
-        client_options.setdefault('sniff_on_start', True)
+        client_options.setdefault('sniff_on_start', False)
         client_options.setdefault('sniff_on_connection_fail', True)
         client_options.setdefault('sniffer_timeout', 60)
         if 'aws' in kwargs:
