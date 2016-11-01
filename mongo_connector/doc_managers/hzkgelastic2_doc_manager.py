@@ -119,7 +119,6 @@ class DocManager(DocManagerBase):
         self.chunk_size = chunk_size
         if self.auto_commit_interval not in [None, 0]:
             self.run_auto_commit()
-        import pdb; pdb.set_trace()
         self._formatter = HzkgDocumentFormatter()
 
         self.has_attachment_mapping = False
