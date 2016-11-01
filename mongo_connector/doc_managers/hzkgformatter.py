@@ -37,8 +37,8 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
     def transform_element(self, key, value):
         if isinstance(value, list):
             if len(value) > 0 and isinstance(value[0], dict):
-                for podict in value:
-                    yield podict["p"], podict["o"]
+                for podict in value: # Field name [*] cannot contain '.'
+                    yield podict["p"].replace(u'.', u'点'), podict["o"]
             else: # list of string
                 yield key, value
         elif isinstance(value, dict):
