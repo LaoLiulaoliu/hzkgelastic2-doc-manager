@@ -34,7 +34,7 @@ from mongo_connector.constants import (DEFAULT_COMMIT_INTERVAL,
                                        DEFAULT_MAX_BULK)
 from mongo_connector.util import exception_wrapper, retry_until_ok
 from mongo_connector.doc_managers.doc_manager_base import DocManagerBase
-from hzkgformatter import HzkgDocumentFormatter
+from mongo_connector.doc_managers.hzkgformatter import HzkgDocumentFormatter
 
 _HAS_AWS = True
 try:
@@ -119,6 +119,7 @@ class DocManager(DocManagerBase):
         self.chunk_size = chunk_size
         if self.auto_commit_interval not in [None, 0]:
             self.run_auto_commit()
+        import pdb; pdb.set_trace()
         self._formatter = HzkgDocumentFormatter()
 
         self.has_attachment_mapping = False
