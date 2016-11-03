@@ -48,6 +48,8 @@ class HzkgDocumentFormatter(DefaultDocumentFormatter):
         else:
             # We assume that transform_value will return a 'flat' value,
             # not a list or dict
+            if key == u'名称':
+                yield "name_suggest", { "input": [value] } # autocomplete
             yield key, self.transform_value(value)
 
 
