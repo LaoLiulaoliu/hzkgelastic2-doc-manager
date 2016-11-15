@@ -83,7 +83,7 @@ class DocManager(DocManagerBase):
             client_options['verify_certs'] = True
             client_options['connection_class'] = es_connection.RequestsHttpConnection
         self.elastic = Elasticsearch(
-            hosts=[url], **client_options)
+            hosts=[url], timeout=60, **client_options)
         self.auto_commit_interval = auto_commit_interval
         self.meta_index_name = meta_index_name
         self.meta_type = meta_type
